@@ -17,6 +17,10 @@ import { HeaderComponent } from './header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { environment } from 'src/environments/environment';
 import { appReducer } from './store/app.state';
+import { AddPostComponent } from './posts/add-post/add-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +31,14 @@ import { appReducer } from './store/app.state';
     HomeComponent,
     HeaderComponent,
     PostsListComponent,
+    AddPostComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    ReactiveFormsModule,
     FormsModule,
     StoreModule.forRoot(appReducer),
     !environment.production ? StoreDevtoolsModule.instrument() : [],

@@ -1,5 +1,5 @@
 export interface PostInterface {
-  id: number;
+  id?: number;
   title: string;
   description: string;
 }
