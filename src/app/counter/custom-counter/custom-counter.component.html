@@ -1,0 +1,10 @@
+<div class="">
+  <input
+    type="text"
+    placeholder="Enter custom value to add "
+    [(ngModel)]="value"
+  />
+  &nbsp;
+  <button (click)="onAdd()" class="btn btn-danger">Add to Counter</button>
+  <div class="my-3">{{ channelName$ | async }}</div>
+</div>
